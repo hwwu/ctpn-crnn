@@ -14,8 +14,9 @@
  ![Image text](https://github.com/hwwu/cptn-crnn/blob/master/cptn/data/demo/source/img_calligraphy_70001_bg.jpg)
  
  csv标记内容为：
+ 
   FileName                    | x1| y1| x2| y2| x3| y3| x4| y4| text
-  ----------------------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-----:
+  ----------------------------|---|---|---|---|---|---|---|---|------
   img_calligraphy_70001_bg.jpg|72 |53 |96 |53 |96 |358|72 |358|黎沈昨骑托那缝丁聚侮篮海炭
   img_calligraphy_70001_bg.jpg|46 |53 |70 |53 |70 |394|46 |394|缩蝇躁劣趋拴局伦绸启杭吭惯蛋仅
   img_calligraphy_70001_bg.jpg|20 |53 |44 |53 |44 |174|20 |174|效射市关蝉
