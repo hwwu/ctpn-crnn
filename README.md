@@ -11,5 +11,5 @@
  sh split_label.py(DATA_FOLDER 和 OUTPUT 改成自己的路径)
 
  原始数据图片如下：
- ![Image text](https://raw.github.com/hwwu/repositpry/master/cptn-crnn/cptn/data/demo/source/img_calligraphy_70001_bg.jpg)
+ ![Image text](https://github.com/hwwu/cptn-crnn/blob/master/cptn/data/demo/source/img_calligraphy_70001_bg.jpg)
 
