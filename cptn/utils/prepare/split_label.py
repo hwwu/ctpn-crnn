@@ -19,7 +19,7 @@ MIN_LEN = 600
 
 label = pd.read_csv(os.path.join(DATA_FOLDER, "label.csv"))
 
-im_fns = os.listdir(os.path.join(DATA_FOLDER, "image"))
+im_fns = os.listdir(DATA_FOLDER)
 im_fns.sort()
 
 if not os.path.exists(os.path.join(OUTPUT, "image")):
