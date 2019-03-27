@@ -37,12 +37,12 @@ https://github.com/Sierkinhane/crnn_chinese_characters_rec
 ### 训练
   
     1.首先下载vgg16的模型
-   https://github.com/tensorflow/models/tree/1af55e018eebce03fb61bba9959a04672536107d/research/slim
+    https://github.com/tensorflow/models/tree/1af55e018eebce03fb61bba9959a04672536107d/research/slim
     ,放到data目录下
   
     2.运行 python3 main/train.py
     可以直接下载我训练好的模型:
-   https://drive.google.com/open?id=1RwZb1HLG0vum-5RHZdSfqtDD2in_sNRD
+    https://drive.google.com/open?id=1RwZb1HLG0vum-5RHZdSfqtDD2in_sNRD
  
  
  ## crnn
@@ -68,7 +68,7 @@ https://github.com/Sierkinhane/crnn_chinese_characters_rec
     
     4.训练结果
     我的训练模型(35次可能对训练集有些过拟合，提供了中间的几个结果模型，看哪一个更适合)：
-   https://drive.google.com/open?id=1Ckz1j5ZXfNILh1ePJlYcDpE_PQ-tqML- 
+    https://drive.google.com/open?id=1Ckz1j5ZXfNILh1ePJlYcDpE_PQ-tqML- 
     训练结果：
     Test loss: 0.178429, accuray: 0.997500
     [35/300][24100/29790] Loss: 0.658935
