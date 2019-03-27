@@ -12,20 +12,20 @@ sys.path.append(os.getcwd())
 
 from utils import orderConvex, shrink_poly
 
-DATA_FOLDER = "/Users/liyangyang/Downloads/df/hanzi/traindataset/"
+DATA_FOLDER = "data/demo/source/"
 OUTPUT = "data/dataset/mlt/"
 MAX_LEN = 1200
 MIN_LEN = 600
 
-label = pd.read_csv(os.path.join(DATA_FOLDER, "verify_lable.csv"))
+label = pd.read_csv(os.path.join(DATA_FOLDER, "label.csv"))
 
-im_fns = os.listdir(os.path.join(DATA_FOLDER, "verifyImage"))
+im_fns = os.listdir(os.path.join(DATA_FOLDER, "image"))
 im_fns.sort()
 
-if not os.path.exists(os.path.join(OUTPUT, "image_verify")):
-    os.makedirs(os.path.join(OUTPUT, "image_verify"))
-if not os.path.exists(os.path.join(OUTPUT, "label_verify")):
-    os.makedirs(os.path.join(OUTPUT, "label_verify"))
+if not os.path.exists(os.path.join(OUTPUT, "image")):
+    os.makedirs(os.path.join(OUTPUT, "image"))
+if not os.path.exists(os.path.join(OUTPUT, "label")):
+    os.makedirs(os.path.join(OUTPUT, "label"))
 
 for im_fn in tqdm(im_fns):
     try:
@@ -34,8 +34,7 @@ for im_fn in tqdm(im_fns):
         if ext.lower() not in ['.jpg', '.png']:
             continue
 
-        # gt_path = os.path.join(DATA_FOLDER, "label", 'gt_' + bfn + '.txt')
-        img_path = os.path.join(DATA_FOLDER, "verifyImage", im_fn)
+        img_path = os.path.join(DATA_FOLDER,im_fn)
         img = cv.imread(img_path)
         img_size = img.shape
         # 旋转竖的图片
@@ -100,8 +99,8 @@ for im_fn in tqdm(im_fns):
 
                     res_polys.append([x_min, y_min, x_max, y_max])
 
-            cv.imwrite(os.path.join(OUTPUT, "image_verify", fn), re_im)
-            with open(os.path.join(OUTPUT, "label_verify", bfn) + ".txt", "w") as f:
+            cv.imwrite(os.path.join(OUTPUT, "image", fn), re_im)
+            with open(os.path.join(OUTPUT, "label", bfn) + ".txt", "w") as f:
                 for p in res_polys:
                     line = ",".join(str(p[i]) for i in range(4))
                     f.writelines(line + "\r\n")
