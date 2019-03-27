@@ -8,9 +8,7 @@ import numpy as np
 
 from utils.dataset.data_util import GeneratorEnqueuer
 
-# DATA_FOLDER = "data/dataset/mlt/"
-DATA_FOLDER = "../../../"
-
+DATA_FOLDER = "data/dataset/mlt/"
 
 def get_training_data():
     img_files = []
