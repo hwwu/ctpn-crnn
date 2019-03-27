@@ -1,5 +1,9 @@
 # cptn-crnn
 
+从别人那里拿来的，稍微改了下，适合识别竖排书法，原文：
+https://github.com/eragonruan/text-detection-ctpn
+https://github.com/Sierkinhane/crnn_chinese_characters_rec
+
 ## cptn
 
 ### 环境搭建(tqdm,opencv-python,Shapely,matplotlib,numpy,tensorflow-gpu or tensorflow,Cython,ipython 自行用pip3安装)
