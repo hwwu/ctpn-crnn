@@ -84,12 +84,12 @@ def val(net, dataset, criterion, max_iter=100):
         for pred, target in zip(sim_preds, list_1):
             if pred == target:
                 n_correct += 1
-            else:
-                print('%-20s, gt: %-20s' % (pred, target))
+#             else:
+#                 print('%-20s, gt: %-20s' % (pred, target))
 
-    # raw_preds = converter.decode(preds.data, preds_size.data, raw=True)[:params.n_test_disp]
-    # for raw_pred, pred, gt in zip(raw_preds, sim_preds, list_1):
-    #     print('%-20s => %-20s, gt: %-20s' % (raw_pred, pred, gt))
+    raw_preds = converter.decode(preds.data, preds_size.data, raw=True)[:params.n_test_disp]
+    for raw_pred, pred, gt in zip(raw_preds, sim_preds, list_1):
+        print('%-20s => %-20s, gt: %-20s' % (raw_pred, pred, gt))
 
     print(n_correct)
     print(max_iter * params.batchSize)
