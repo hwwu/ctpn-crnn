@@ -43,3 +43,18 @@ https://github.com/Sierkinhane/crnn_chinese_characters_rec
   
   可以直接下载我训练好的模型:https://drive.google.com/open?id=1RwZb1HLG0vum-5RHZdSfqtDD2in_sNRD
  
+ 
+ ## crnn
+ 
+ ### 环境搭建
+ 
+    1.安装 pytorch和warp-ctc
+    根据cuda版本选择pytorch的安装文件
+    pip3 install https://download.pytorch.org/whl/cu100/torch-1.0.1.post2-cp36-cp36m-linux_x86_64.whl
+    pip3 install torchvision
+    git clone https://github.com/SeanNaren/warp-ctc.git
+    cd warp-ctc;mkdir build; cd build;cmake ..;make
+    cd ./warp-ctc/pytorch_binding;python setup.py install
+    将 pytorch_binding 中生成的warpctc_pytorch文件夹copy到crnn下
+ 
+
