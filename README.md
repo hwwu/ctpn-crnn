@@ -33,4 +33,6 @@
   ,放到data目录下
   
   2.运行 python3 main/train.py
+  
+  可以直接下载我训练好的模型:https://drive.google.com/open?id=1RwZb1HLG0vum-5RHZdSfqtDD2in_sNRD
  
