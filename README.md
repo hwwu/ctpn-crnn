@@ -66,7 +66,13 @@ https://github.com/Sierkinhane/crnn_chinese_characters_rec
     
     
     4.结果下载
-    我的训练模型：
-    https://drive.google.com/open?id=1IcOVD48W0U-vo5UCtq6LeRAjBlVl7lgx
+    我的训练模型(35次可能对训练集有些过拟合，提供了中间的几个结果模型，看哪一个更适合)：
+    https://drive.google.com/open?id=1Ckz1j5ZXfNILh1ePJlYcDpE_PQ-tqML- 
+    训练结果：
+    Test loss: 0.178429, accuray: 0.997500
+    [35/300][24100/29790] Loss: 0.658935
+    [35/300][24200/29790] Loss: 0.534306
+    [35/300][24300/29790] Loss: 0.541349
+    [35/300][24400/29790] Loss: 0.475645
  
 
