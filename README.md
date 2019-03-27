@@ -26,4 +26,10 @@
  
  lable格式在 data/demo/img_calligraphy_70001_bg.txt中
 
+3.训练
+  首先下载vgg16的模型
+  https://github.com/tensorflow/models/tree/1af55e018eebce03fb61bba9959a04672536107d/research/slim
+  ,放到data目录下
+  
+  运行 python3 main/train.py
  
