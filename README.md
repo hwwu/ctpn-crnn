@@ -56,5 +56,17 @@ https://github.com/Sierkinhane/crnn_chinese_characters_rec
     cd warp-ctc;mkdir build; cd build;cmake ..;make
     cd ./warp-ctc/pytorch_binding;python setup.py install
     将 pytorch_binding 中生成的warpctc_pytorch文件夹copy到crnn下
+    
+    2.制作训练集
+    python3 to_lmdb/tolmdb.py(按比例将训练集划分成train和val，生成方式一样，就是放到不同的目录)
+    根据自己的lable文件，生成 alphabets.py(就是将所有lable去重写进此文件)
+    
+    3.训练(第一次训练，--model_path '')
+    python3 crnn_main.py --trainroot './data/' --valroot './data/val' --cuda --model_path './expr/crnn_Rec_done_34_2019-03-26.pth'
+    
+    
+    4.结果下载
+    我的训练模型：
+    https://drive.google.com/open?id=1IcOVD48W0U-vo5UCtq6LeRAjBlVl7lgx
  
 
