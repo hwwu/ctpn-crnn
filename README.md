@@ -20,4 +20,10 @@
   img_calligraphy_70001_bg.jpg|72 |53 |96 |53 |96 |358|72 |358|黎沈昨骑托那缝丁聚侮篮海炭
   img_calligraphy_70001_bg.jpg|46 |53 |70 |53 |70 |394|46 |394|缩蝇躁劣趋拴局伦绸启杭吭惯蛋仅
   img_calligraphy_70001_bg.jpg|20 |53 |44 |53 |44 |174|20 |174|效射市关蝉
+ 
+ 创建好的数据集图片(绿线为标记的坐标,输入ctpn的图片是不带绿线的):
+ ![Image text](https://github.com/hwwu/cptn-crnn/blob/master/cptn/data/demo/img_calligraphy_70001_bg.jpg)
+ 
+ lable格式在 data/demo/img_calligraphy_70001_bg.txt中
 
+ 
