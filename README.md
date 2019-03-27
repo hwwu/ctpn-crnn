@@ -1,8 +1,11 @@
 # cptn-crnn
 
 从别人那里拿来的，稍微改了下，适合识别竖排书法，原文：
+
 https://github.com/eragonruan/text-detection-ctpn
+
 https://github.com/Sierkinhane/crnn_chinese_characters_rec
+
 
 ## cptn
 
