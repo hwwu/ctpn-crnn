@@ -93,24 +93,9 @@ if __name__ == '__main__':
             if i > 10:
                 break
             image = Image.open(im_fn)
-            # image.show()
-            image1 = image.filter(ImageFilter.CONTOUR)
-            # image1.show()
-            image2 = image.filter(ImageFilter.SMOOTH_MORE)
-            # # image2.show()
-            image3 = image.filter(ImageFilter.GaussianBlur(radius=1.3))
-            # # image3.show()
-
             result = crnn_recognition(image, model)
-            result1 = crnn_recognition(image1, model)
-            result2 = crnn_recognition(image2, model)
-            result3 = crnn_recognition(image3, model)
             line = os.path.basename(im_fn)
-            line += ',' + result
-            line += ',' + result1
-            line += ',' + result2
-            line += ','
-            line += result3 + "\r\n"
+            line += ',' + result + "\r\n"
             f.writelines(line)
 
     finished = time.time()
