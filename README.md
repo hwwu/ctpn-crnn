@@ -2,11 +2,11 @@
 
 ## cptn
 
-1.环境搭建(tqdm,opencv-python,Shapely,matplotlib,numpy,tensorflow-gpu or tensorflow,Cython,ipython 自行用pip3安装)
+### 环境搭建(tqdm,opencv-python,Shapely,matplotlib,numpy,tensorflow-gpu or tensorflow,Cython,ipython 自行用pip3安装)
  cd cptn/utils/bbox
  sh make.sh
 
-2.创建数据集
+### 创建数据集
  cd cptn/utils/prepare
  sh split_label.py(DATA_FOLDER 和 OUTPUT 改成自己的路径)
 
@@ -26,10 +26,11 @@
  
  lable格式在 data/demo/img_calligraphy_70001_bg.txt中
 
-3.训练
-  首先下载vgg16的模型
+### 训练
+  
+  1.首先下载vgg16的模型
   https://github.com/tensorflow/models/tree/1af55e018eebce03fb61bba9959a04672536107d/research/slim
   ,放到data目录下
   
-  运行 python3 main/train.py
+  2.运行 python3 main/train.py
  
