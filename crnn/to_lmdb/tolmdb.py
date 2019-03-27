@@ -49,7 +49,7 @@ def createDataset(outputPath, imagePathList, labelList, lexiconList=None, checkV
     cache = {}
     cnt = 1
     for i in range(nSamples):
-        imagePath = os.path.join('/Users/liyangyang/Downloads/df/hanzi/traindataset', 'validation', imagePathList[i][0])
+        imagePath = os.path.join('./data/traindataset', 'image', imagePathList[i][0])
         # print(imagePath)
         label = ''.join(labelList[i])
         # print(label)
@@ -68,34 +68,33 @@ def createDataset(outputPath, imagePathList, labelList, lexiconList=None, checkV
         h1, w1, c1 = image.shape
         # print(image.shape)
 
-        if h1 > w1:
-            image = image[ymin:ymax, xmin:xmax]
-            image = cv2.transpose(image)
-            image = cv2.flip(image, 0)
-            # print(image.shape)
+        image = image[ymin:ymax, xmin:xmax]
+        image = cv2.transpose(image)
+        image = cv2.flip(image, 0)
+        # print(image.shape)
 
-            # imageBin = cv2.imencode(image, cv2.IMREAD_GRAYSCALE)
+        # imageBin = cv2.imencode(image, cv2.IMREAD_GRAYSCALE)
 
-            img_encode = cv2.imencode('.jpg', image)[1]
-            data_encode = np.array(img_encode)
-            imageBin = data_encode.tostring()
+        img_encode = cv2.imencode('.jpg', image)[1]
+        data_encode = np.array(img_encode)
+        imageBin = data_encode.tostring()
 
-            if checkValid:
-                if not checkImageIsValid(imageBin):
-                    print('%s is not a valid image' % imagePath)
-                    continue
-            imageKey = 'image-%09d' % cnt
-            labelKey = 'label-%09d' % cnt
-            cache[imageKey] = imageBin
-            cache[labelKey] = label
-            if lexiconList:
-                lexiconKey = 'lexicon-%09d' % cnt
-                cache[lexiconKey] = ' '.join(lexiconList[i])
-            if cnt % 1000 == 0:
-                writeCache(env, cache)
-                cache = {}
-                print('Written %d / %d' % (cnt, nSamples))
-            cnt += 1
+        if checkValid:
+            if not checkImageIsValid(imageBin):
+                print('%s is not a valid image' % imagePath)
+                continue
+        imageKey = 'image-%09d' % cnt
+        labelKey = 'label-%09d' % cnt
+        cache[imageKey] = imageBin
+        cache[labelKey] = label
+        if lexiconList:
+            lexiconKey = 'lexicon-%09d' % cnt
+            cache[lexiconKey] = ' '.join(lexiconList[i])
+        if cnt % 1000 == 0:
+            writeCache(env, cache)
+            cache = {}
+            print('Written %d / %d' % (cnt, nSamples))
+        cnt += 1
             # print(cnt)
     nSamples = cnt - 1
     cache['num-samples'] = str(nSamples)
@@ -104,13 +103,12 @@ def createDataset(outputPath, imagePathList, labelList, lexiconList=None, checkV
 
 
 if __name__ == '__main__':
-    DATA_FOLDER = "/Users/liyangyang/Downloads/df/hanzi/traindataset/"
+    DATA_FOLDER = "./data/traindataset/"
 
-    outputPath = "./all"
+    outputPath = "./train"
     imageList = []
 
-    label = pd.read_csv(DATA_FOLDER + 'verify_lable.csv')
-    # label2 = pd.read_csv(DATA_FOLDER + 'train_lable.csv')
+    label = pd.read_csv(DATA_FOLDER + 'lable.csv')
     labelList = []
     for index, row in label.iterrows():
         imageList.append([row['FileName'], row['x1'], row['y1'], row['x2'], row['y2'], row['x3'], row['y3'], row['x4'],
