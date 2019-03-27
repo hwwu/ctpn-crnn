@@ -65,7 +65,7 @@ https://github.com/Sierkinhane/crnn_chinese_characters_rec
     python3 crnn_main.py --trainroot './data/' --valroot './data/val' --cuda --model_path './expr/crnn_Rec_done_35_2019-03-27.pth'
     
     
-    4.结果下载
+    4.训练结果
     我的训练模型(35次可能对训练集有些过拟合，提供了中间的几个结果模型，看哪一个更适合)：
     https://drive.google.com/open?id=1Ckz1j5ZXfNILh1ePJlYcDpE_PQ-tqML- 
     训练结果：
@@ -74,5 +74,4 @@ https://github.com/Sierkinhane/crnn_chinese_characters_rec
     [35/300][24200/29790] Loss: 0.534306
     [35/300][24300/29790] Loss: 0.541349
     [35/300][24400/29790] Loss: 0.475645
- 
-
+ ![Image text](https://github.com/hwwu/cptn-crnn/blob/master/crnn/test_images/1img_calligraphy_80040_bg.jpg) :results: 兽亵播疒阌飨百怒逭纫
