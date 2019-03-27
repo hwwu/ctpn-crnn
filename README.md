@@ -74,4 +74,6 @@ https://github.com/Sierkinhane/crnn_chinese_characters_rec
     [35/300][24200/29790] Loss: 0.534306
     [35/300][24300/29790] Loss: 0.541349
     [35/300][24400/29790] Loss: 0.475645
- ![Image text](https://github.com/hwwu/cptn-crnn/blob/master/crnn/test_images/1img_calligraphy_80040_bg.jpg) :results: 兽亵播疒阌飨百怒逭纫
+ ![Image text](https://github.com/hwwu/cptn-crnn/blob/master/crnn/test_images/1img_calligraphy_80040_bg.jpg) : 兽亵播疒阌飨百怒逭纫
+ ![Image text](https://github.com/hwwu/cptn-crnn/blob/master/crnn/test_images/3img_calligraphy_80011_bg.jpg) : 蜂肉昆材摄
+ ![Image text](https://github.com/hwwu/cptn-crnn/blob/master/crnn/test_images/3img_calligraphy_80017_bg.jpg) : 不似周趋阙去
