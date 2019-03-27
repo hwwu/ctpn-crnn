@@ -62,7 +62,7 @@ https://github.com/Sierkinhane/crnn_chinese_characters_rec
     根据自己的lable文件，生成 alphabets.py(就是将所有lable去重写进此文件)
     
     3.训练(第一次训练，--model_path '')
-    python3 crnn_main.py --trainroot './data/' --valroot './data/val' --cuda --model_path './expr/crnn_Rec_done_34_2019-03-26.pth'
+    python3 crnn_main.py --trainroot './data/' --valroot './data/val' --cuda --model_path './expr/crnn_Rec_done_35_2019-03-27.pth'
     
     
     4.结果下载
