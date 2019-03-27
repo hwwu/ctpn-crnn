@@ -25,8 +25,8 @@ str1 = alphabets.alphabet
 
 import argparse
 
-tf.app.flags.DEFINE_string('test_data_path', '/Users/liyangyang/Downloads/df/hanzi/ctpn_result/img/', '')
-tf.app.flags.DEFINE_string('output_path', '/Users/liyangyang/Downloads/df/hanzi/crnn_result/', '')
+tf.app.flags.DEFINE_string('test_data_path', './ctpn_result/img/', '')
+tf.app.flags.DEFINE_string('output_path', './crnn_result/', '')
 FLAGS = tf.app.flags.FLAGS
 
 
